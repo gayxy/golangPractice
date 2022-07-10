@@ -1,4 +1,4 @@
-package main
+package functions
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"sort"
 )
 
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	nums3 := append(nums1, nums2...)
 	sort.Ints(nums3)
 	fmt.Println(nums3)
@@ -18,8 +18,4 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		return float64(nums3[int(math.Floor(float64(length/2)))])
 	}
 
-}
-
-func main() {
-	fmt.Println(findMedianSortedArrays([]int{1, 2}, []int{3, 4}))
 }

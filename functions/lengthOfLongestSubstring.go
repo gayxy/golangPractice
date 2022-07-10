@@ -1,11 +1,10 @@
-package main
+package functions
 
 import (
-	"fmt"
 	"math"
 )
 
-func lengthOfLongestSubstring(s string) int {
+func LengthOfLongestSubstring(s string) int {
 	// 哈希集合，记录每个字符是否出现过
 	m := map[byte]int{}
 	n := len(s)
@@ -25,8 +24,4 @@ func lengthOfLongestSubstring(s string) int {
 		ans = int(math.Max(float64(ans), float64(rk-i+1)))
 	}
 	return ans
-}
-
-func main() {
-	fmt.Println(lengthOfLongestSubstring("abcabcbb"))
 }

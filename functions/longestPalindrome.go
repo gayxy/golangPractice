@@ -1,8 +1,6 @@
-package main
+package functions
 
-import "fmt"
-
-func longestPalindrome(s string) string {
+func LongestPalindrome(s string) string {
 	if s == "" {
 		return ""
 	}
@@ -24,8 +22,4 @@ func expandAroundCenter(s string, left, right int) (int, int) {
 	for ; left >= 0 && right < len(s) && s[left] == s[right]; left, right = left-1, right+1 {
 	}
 	return left + 1, right - 1
-}
-
-func main() {
-	fmt.Println(longestPalindrome("ccc"))
 }

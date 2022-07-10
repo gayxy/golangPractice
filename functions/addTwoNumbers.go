@@ -1,14 +1,13 @@
-package main
-
-import "fmt"
+package functions
 
 // Definition for singly-linked list.
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-func addTwoNumbers(l1, l2 *ListNode) (head *ListNode) {
+func AddTwoNumbers(l1, l2 *ListNode) (head *ListNode) {
 	var tail *ListNode
 	carry := 0
 	for l1 != nil || l2 != nil {
@@ -35,14 +34,4 @@ func addTwoNumbers(l1, l2 *ListNode) (head *ListNode) {
 		tail.Next = &ListNode{Val: carry}
 	}
 	return
-}
-
-func main() {
-	l1 := &ListNode{Val: 2}
-	l1.Next = &ListNode{Val: 4}
-	l1.Next = &ListNode{Val: 3}
-	l2 := &ListNode{Val: 5}
-	l2.Next = &ListNode{Val: 6}
-	l2.Next = &ListNode{Val: 4}
-	fmt.Println(addTwoNumbers(l1, l2))
 }
