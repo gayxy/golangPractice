@@ -1,9 +1,3 @@
-/*
- * @Author: vingurzhou
- * @Date: 2022-07-10 22:02:57
- * @Last Modified by: vingurzhou
- * @Last Modified time: 2022-07-10 22:17:39
- */
 package main
 
 import (
